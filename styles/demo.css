@@ -1,0 +1,103 @@
+/* Local states for the standalone preview. Stage layout rules live in the other sheets. */
+
+@media (width < 720px) {
+  .home-footer {
+    display: none;
+  }
+}
+
+@media (width < 1024px) {
+  .quick-navigation,
+  .header .demo-search-back {
+    display: none;
+  }
+}
+
+.header .demo-search-back[hidden] {
+  display: none;
+}
+
+.posters-slider-pagination .swiper-pagination-bullet-active {
+  background: #1c222a;
+}
+
+.demo-search-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-width: 86.8rem;
+}
+
+.demo-search-links a {
+  padding: 1.2rem 1.6rem;
+  border-radius: 10rem;
+  background: #fff;
+  color: #1c222a;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.demo-search-results {
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 86.8rem;
+  margin-top: 1.6rem;
+}
+
+.demo-search-results a,
+.demo-search-results p {
+  padding: 1.4rem 1.6rem;
+  border-radius: 2rem;
+  background: #fff;
+  color: #1c222a;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.demo-search-results[hidden],
+.demo-search-links[hidden],
+.demo-search-popular[hidden] {
+  display: none;
+}
+
+.demo-search-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.demo-search-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 2.4rem;
+  background: #fff;
+  color: #1c222a;
+  text-decoration: none;
+}
+
+.demo-search-card:first-child {
+  grid-column: 1 / -1;
+}
+
+.demo-search-card span {
+  display: block;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+
+.demo-search-card:first-child span {
+  font-size: 2.2rem;
+}
+
+.demo-search-card img {
+  width: calc(100% - 0.8rem);
+  aspect-ratio: 1.4;
+  margin: 0 0.4rem 0.4rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}

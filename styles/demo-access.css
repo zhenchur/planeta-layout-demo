@@ -1,0 +1,75 @@
+html.demo-access-locked body > :not(.demo-access) {
+  display: none !important;
+}
+
+html.demo-access-locked,
+html.demo-access-locked body {
+  background: #f3f4f4;
+}
+
+.demo-access {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  padding: 20px;
+  color: #1c222a;
+  color-scheme: light;
+  font-family: TTFirsTextMedium, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.demo-access__form {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 360px);
+  padding: 28px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.demo-access__form h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.demo-access__form input,
+.demo-access__form button {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font: inherit;
+}
+
+.demo-access__form input {
+  border: 1px solid #929aa4;
+  background: #fff;
+  color: inherit;
+}
+
+.demo-access__form input[aria-invalid="true"] {
+  border-color: #a83229;
+}
+
+.demo-access__form button {
+  margin-top: 4px;
+  border: 0;
+  background: #1c222a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.demo-access__form :is(input, button):focus-visible {
+  outline: 2px solid #2760a8;
+  outline-offset: 2px;
+}
+
+.demo-access__error {
+  margin: 0;
+  color: #a83229;
+  font-size: 14px;
+}
